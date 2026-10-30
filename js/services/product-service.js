@@ -39,10 +39,22 @@
     equivalentes: []
   };
 
+  const CONDICAO_ALIAS = Object.freeze({
+    novo: 'novo',
+    nova: 'novo',
+    reformado: 'reformado',
+    reformada: 'reformado',
+    revisado: 'reformado',
+    revisada: 'reformado',
+    'semi-novo': 'reformado',
+    'semi-nova': 'reformado',
+    seminovo: 'reformado',
+    seminova: 'reformado'
+  });
+
   const CONDICAO_ROTULO = Object.freeze({
     novo: 'Novo',
-    'semi-novo': 'Semi-novo',
-    reformado: 'Reformado'
+    reformado: 'Revisado'
   });
 
   const clean = (value) => (typeof value === 'string' ? value.trim() : value);
@@ -68,7 +80,7 @@
     product.destaque = asFlag(product.destaque);
     product.demonstrativo = asFlag(product.demonstrativo);
     const condicao = normalizeText(product.condicao).replace(/\s+/g, '-');
-    product.condicao = CONDICAO_ROTULO[condicao] ? condicao : '';
+    product.condicao = CONDICAO_ALIAS[condicao] || '';
     const eqs = raw.equivalentes;
     product.equivalentes = Array.isArray(eqs)
       ? eqs.map((id) => String(id || '').trim()).filter(Boolean)

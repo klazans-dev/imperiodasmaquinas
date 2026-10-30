@@ -9,7 +9,6 @@ const MAQUIMINAS_CONFIG = Object.freeze({
     nome: 'Império das Máquinas',
     nomeCurto: 'Império',
     responsavel: 'Beatriz Amaral',
-    instagramPessoal: '@amarallbeatriz',
     slogan: 'Máquinas para padaria',
     cidade: '',
     estado: '',
@@ -18,7 +17,7 @@ const MAQUIMINAS_CONFIG = Object.freeze({
     cnpj: '',
     origem: '',
     tempoMercado: '',
-    linhas: Object.freeze(['Novas', 'Seminovas', 'Revisadas'])
+    linhas: Object.freeze(['Novas', 'Revisadas'])
   }),
 
   whatsapp: '5532984818603',
@@ -59,7 +58,7 @@ const MAQUIMINAS_CONFIG = Object.freeze({
    * (parcelas, PIX, prazos) são informadas no atendimento.
    */
   condicoes: Object.freeze({
-    linhasEquipamento: Object.freeze(['Novas', 'Seminovas', 'Revisadas']),
+    linhasEquipamento: Object.freeze(['Novas', 'Revisadas']),
     garantia: true,
     melhoresCondicoes: true,
     voltagemObrigatoria: true,

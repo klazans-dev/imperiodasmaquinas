@@ -123,27 +123,22 @@
     }
     .sign img { height: 36px; display: block; margin-bottom: 8px; }
     .pix {
-      display: grid;
-      grid-template-columns: 1fr 1.15fr;
-      gap: 14px;
-      align-items: start;
       margin-top: 10px;
+      padding: 14px 16px;
+      background: #fff8dd;
+      border: 2px solid var(--ink);
     }
     .pix-key {
+      margin: 6px 0 10px;
       font-family: ui-monospace, Consolas, "Courier New", monospace;
-      font-size: 15px;
+      font-size: 22px;
       font-weight: 700;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.06em;
+      color: var(--ink);
       background: #fff;
-      border: 1px dashed var(--accent);
-      padding: 10px 12px;
+      border: 2px dashed var(--accent);
+      padding: 12px 14px;
       word-break: break-all;
-    }
-    .pix img {
-      width: 100%;
-      height: auto;
-      border: 1px solid var(--line);
-      display: block;
     }
     .card {
       border: 1px solid var(--line);
@@ -195,9 +190,8 @@
     .bar-row { display: grid; grid-template-columns: 150px 1fr 88px; gap: 8px; align-items: center; font-size: 11px; }
     .track { height: 14px; background: #e6edf6; }
     .fill { height: 100%; background: var(--accent); }
-    .fill--site { background: var(--ink); width: 18.4%; }
-    .fill--b { background: var(--accent); width: 45.9%; }
-    .fill--c { background: var(--yellow); width: 81.6%; }
+    .fill--site { background: var(--ink); width: 72%; }
+    .fill--b { background: var(--accent); width: 100%; }
     .legend { display: flex; flex-wrap: wrap; gap: 10px 16px; font-size: 11px; margin-top: 8px; }
     .sw { display: inline-block; width: 10px; height: 10px; margin-right: 6px; vertical-align: -1px; }
     .foot-note { margin-top: 18px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 10.5px; color: var(--muted); }
@@ -281,7 +275,7 @@
       <div>
         <p class="kicker">Proposta comercial</p>
         <h1>Site institucional</h1>
-        <p class="muted">Para Império das Máquinas. Cobrança desta proposta: somente o site. Login e cadastro de produtos ficam para a segunda etapa, cobrada à parte.</p>
+        <p class="muted">Para Império das Máquinas. Cobrança desta proposta: somente o site. O sistema completo fica à parte: implantação de R$ 2.500,00 e mensalidade de R$ 299,99.</p>
       </div>
       <div class="meta">
         <img class="logo" src="../assets/images/logo-imperio.jpg" alt="Império das Máquinas">
@@ -301,7 +295,7 @@
         <span class="tag">Função gancho</span>
         <h2>BIA</h2>
         <p>A BIA já aparece no site como assistente do Império das Máquinas: saúda o visitante, encaminha para orçamento, catálogo, Instagram ou especialista e só fala o que está cadastrado — sem inventar preço, prazo ou especificação.</p>
-        <p style="margin-top:8px">No site (R$ 1.800) ela opera em <strong style="color:#fff">preview</strong>. Login, produtos reais e assistente ligada ao ERP entram na <strong style="color:#ffc20e">segunda etapa</strong>, cobrada à parte.</p>
+        <p style="margin-top:8px">No site (R$ 1.800) ela opera em <strong style="color:#fff">preview</strong>. No <strong style="color:#ffc20e">sistema completo</strong> ela pode operar online, com implantação de R$ 2.500,00 e mensalidade de R$ 299,99.</p>
       </div>
     </aside>
 
@@ -310,14 +304,14 @@
         <p class="kicker">Cliente</p>
         <h3>Império das Máquinas</h3>
         <p>Beatriz Amaral<br>
-        Máquinas para padaria · novas, seminovas e revisadas<br>
+        Máquinas para padaria · novas e revisadas<br>
         WhatsApp (32) 98481-8603<br>
-        Instagram @imperiodasmaquinasbia · @amarallbeatriz</p>
+        Instagram @imperiodasmaquinasbia</p>
       </div>
       <div class="card">
         <p class="kicker">Emitente</p>
         <h3>Callinfo Tecnologia</h3>
-        <p>Site institucional, e, em etapa posterior, ERP Callinfo (login e produtos).<br>
+        <p>Site institucional e, à parte, sistema completo Callinfo (login, produtos e mensalidade).<br>
         PIX (CNPJ): <strong>28044529000126</strong><br>
         Alexandre Calazans dos Santos · CNPJ 28.044.529/0001-26</p>
       </div>
@@ -325,16 +319,16 @@
 
     <div class="now">
       <span class="tag tag--ok">Cobrança desta proposta</span>
-      <p style="margin:8px 0 0"><strong>Somente o site: R$ 1.800,00.</strong> PIX chave CNPJ <strong>28044529000126</strong>. Login, catálogo oficial de produtos e Área do Cliente <strong>não entram neste valor</strong> — segunda etapa, cobrada à parte, sob nova proposta.</p>
+      <p style="margin:8px 0 0"><strong>Somente o site: R$ 1.800,00.</strong> PIX chave CNPJ <strong>28044529000126</strong>. Login, catálogo oficial, Área do Cliente e BIA online <strong>não entram neste valor</strong> — sistema completo, cobrado à parte.</p>
     </div>
 
     <div class="partner">
       <span class="tag">Cliente parceiro</span>
-      <p style="margin:8px 0 0"><strong>Indicação família.</strong> Os valores de implantação da etapa 2, quando forem contratados, seguem a tabela de cliente parceiro. Não há cobrança de sistema nesta fatura.</p>
+      <p style="margin:8px 0 0"><strong>Indicação família.</strong> O sistema completo, quando contratado, segue a tabela de cliente parceiro: implantação de R$ 2.500,00 e mensalidade de R$ 299,99. Não há cobrança de sistema nesta fatura.</p>
     </div>
 
     <h2>1. Investimento</h2>
-    <div class="grid-3">
+    <div class="grid-2">
       <div class="pkg pkg--rec">
         <span class="tag tag--ok">Cobrar agora</span>
         <h3>Site</h3>
@@ -343,28 +337,21 @@
         <p class="small">Site institucional no ar: identidade da logo, Instagram, WhatsApp, catálogo demonstrativo, orçamento, BIA em preview. Sem login e sem produtos oficiais no ERP.</p>
       </div>
       <div class="pkg pkg--later">
-        <span class="tag tag--wait">Etapa 2 · à parte</span>
-        <h3>Sistema · login e produtos</h3>
-        <p class="price">R$ 4.500</p>
-        <p class="month">Não incluso neste PIX</p>
-        <p class="small">Área do Cliente (login Callinfo), catálogo oficial no lugar dos demonstrativos, leads no ERP. Cobrado à parte, quando autorizar a segunda etapa.</p>
-      </div>
-      <div class="pkg pkg--later">
-        <span class="tag tag--wait">Etapa 2 plus · à parte</span>
+        <span class="tag tag--wait">À parte</span>
         <h3>Sistema completo</h3>
-        <p class="price">R$ 8.000</p>
-        <p class="month">Não incluso neste PIX</p>
-        <p class="small">Inclui login e produtos, mais BIA/AXIA online e cotação de transporte no orçamento. Substitui o sistema básico; não soma. Cobrado à parte.</p>
+        <p class="price">R$ 2.500</p>
+        <p class="month">+ R$ 299,99 / mês</p>
+        <p class="small">Implantação única, cobrada à parte: login, catálogo oficial, leads no ERP, BIA online e logística no orçamento. A mensalidade cobre manutenção constante, melhorias de funcionamento e integrações com APIs de terceiros.</p>
       </div>
     </div>
-    <p class="small" style="margin-top:10px">O PIX desta proposta é <strong>apenas R$ 1.800,00 (site)</strong>. Os valores de R$ 4.500 e R$ 8.000 são referência da etapa 2 e só vigoram após aceite específico dessa etapa.</p>
+    <p class="small" style="margin-top:10px">O PIX desta proposta é <strong>apenas R$ 1.800,00 (site)</strong>. O sistema completo é <strong>R$ 2.500,00</strong> de implantação e <strong>R$ 299,99 por mês</strong>, e só vale após aceite específico.</p>
 
     <table style="margin-top:10px">
       <thead>
         <tr>
-          <th>Etapa</th>
+          <th>Item</th>
           <th>O que entra</th>
-          <th class="num">Implantação</th>
+          <th class="num">Valor</th>
           <th>Nesta cobrança?</th>
         </tr>
       </thead>
@@ -376,16 +363,16 @@
           <td><strong>Sim · PIX agora</strong></td>
         </tr>
         <tr>
-          <td>2 — Login e produtos</td>
-          <td>Login Callinfo, cadastro de produtos no ERP, catálogo real no site, leads</td>
-          <td class="num">R$ 4.500,00</td>
+          <td>Sistema completo</td>
+          <td>Login Callinfo, catálogo oficial, leads, BIA online e logística no orçamento</td>
+          <td class="num">R$ 2.500,00</td>
           <td>Não · cobrado à parte</td>
         </tr>
         <tr>
-          <td>2 plus — Sistema completo</td>
-          <td>Etapa 2 + assistente online + logística no orçamento</td>
-          <td class="num">R$ 8.000,00</td>
-          <td>Não · cobrado à parte</td>
+          <td>Mensalidade</td>
+          <td>Manutenção constante, melhorias de funcionamento e integrações com APIs de terceiros</td>
+          <td class="num">R$ 299,99 / mês</td>
+          <td>Não · após o sistema</td>
         </tr>
       </tbody>
       <tfoot>
@@ -397,28 +384,26 @@
       </tfoot>
     </table>
 
-    <h2>2. Comparativo (site agora × etapa 2)</h2>
+    <h2>2. Comparativo (site × sistema completo)</h2>
     <div class="chart-wrap">
-      <svg viewBox="0 0 120 120" width="170" height="170" aria-label="Peso relativo das linhas de preço">
-        <title>Participação das linhas (R$ 1.800 + R$ 4.500 + R$ 8.000 = R$ 14.300)</title>
-        <circle cx="60" cy="60" r="40" fill="none" stroke="#041d3f" stroke-width="18" stroke-dasharray="31.6 251.33" transform="rotate(-90 60 60)"/>
-        <circle cx="60" cy="60" r="40" fill="none" stroke="#0057c8" stroke-width="18" stroke-dasharray="79.1 251.33" stroke-dashoffset="-31.6" transform="rotate(-90 60 60)"/>
-        <circle cx="60" cy="60" r="40" fill="none" stroke="#ffc20e" stroke-width="18" stroke-dasharray="140.6 251.33" stroke-dashoffset="-110.7" transform="rotate(-90 60 60)"/>
-        <text x="60" y="56" text-anchor="middle" font-size="9" font-family="Inter" fill="#4f5f74">Linhas</text>
-        <text x="60" y="68" text-anchor="middle" font-size="11" font-weight="700" font-family="Barlow Condensed" fill="#041d3f">TABELA</text>
+      <svg viewBox="0 0 120 120" width="170" height="170" aria-label="Peso relativo do site e do sistema completo">
+        <title>Site R$ 1.800 e sistema completo R$ 2.500. A mensalidade de R$ 299,99 não entra neste gráfico.</title>
+        <circle cx="60" cy="60" r="40" fill="none" stroke="#041d3f" stroke-width="18" stroke-dasharray="105.2 251.33" transform="rotate(-90 60 60)"/>
+        <circle cx="60" cy="60" r="40" fill="none" stroke="#0057c8" stroke-width="18" stroke-dasharray="146.1 251.33" stroke-dashoffset="-105.2" transform="rotate(-90 60 60)"/>
+        <text x="60" y="56" text-anchor="middle" font-size="9" font-family="Inter" fill="#4f5f74">Implantação</text>
+        <text x="60" y="68" text-anchor="middle" font-size="11" font-weight="700" font-family="Barlow Condensed" fill="#041d3f">R$ 4.300</text>
       </svg>
       <div>
-        <p class="small" style="margin-bottom:10px">Gráfico 1 — peso relativo das linhas (R$ 1.800 + R$ 4.500 + R$ 8.000 = R$ 14.300). Só a fatia do site (R$ 1.800) é cobrada agora.</p>
-        <div class="bars" role="img" aria-label="Implantação por etapa">
-          <div class="bar-row"><span>1 · Site (agora)</span><div class="track"><div class="fill fill--site"></div></div><strong>R$ 1.800</strong></div>
-          <div class="bar-row"><span>2 · Login/produtos</span><div class="track"><div class="fill fill--b"></div></div><strong>R$ 4.500</strong></div>
-          <div class="bar-row"><span>2 plus · Completo</span><div class="track"><div class="fill fill--c"></div></div><strong>R$ 8.000</strong></div>
+        <p class="small" style="margin-bottom:10px">Gráfico 1 — site R$ 1.800 (42%) e sistema completo R$ 2.500 (58%). Só o site é cobrado agora. A mensalidade de R$ 299,99 fica de fora desta pizza.</p>
+        <div class="bars" role="img" aria-label="Implantação do site e do sistema completo">
+          <div class="bar-row"><span>Site (agora)</span><div class="track"><div class="fill fill--site"></div></div><strong>R$ 1.800</strong></div>
+          <div class="bar-row"><span>Sistema completo</span><div class="track"><div class="fill fill--b"></div></div><strong>R$ 2.500</strong></div>
         </div>
-        <p class="small" style="margin-top:8px">Gráfico 2 — barras proporcionais a R$ 9.800 (site + sistema completo). Fonte: esta proposta · 30/10/2026.</p>
+        <p class="small" style="margin-top:8px">Gráfico 2 — barras na escala de R$ 2.500. Mensalidade do sistema: R$ 299,99. Fonte: esta proposta · 30/10/2026.</p>
         <div class="legend">
           <span><i class="sw" style="background:#041d3f"></i>Site R$ 1.800 · PIX desta proposta</span>
-          <span><i class="sw" style="background:#0057c8"></i>Etapa 2 R$ 4.500 · à parte</span>
-          <span><i class="sw" style="background:#ffc20e"></i>Etapa 2 plus R$ 8.000 · à parte</span>
+          <span><i class="sw" style="background:#0057c8"></i>Sistema completo R$ 2.500 · à parte</span>
+          <span><i class="sw" style="background:#ffc20e"></i>Mensalidade R$ 299,99</span>
         </div>
       </div>
     </div>
@@ -428,12 +413,12 @@
       <div>
         <h3>Páginas públicas</h3>
         <ul class="checks">
-          <li>Início — hero com logo, linhas novas/seminovas/revisadas, categorias e destaques</li>
+          <li>Início — hero com logo, linhas novas e revisadas, categorias e destaques</li>
           <li>Equipamentos — busca, filtros e 15 tipos demonstrativos</li>
           <li>Produto — ficha, WhatsApp e orçamento</li>
           <li>Soluções — orientação, montagem, instalação, logística sob consulta</li>
           <li>Condições — o que o Instagram declara (linhas, garantia, atendimento)</li>
-          <li>Sobre nós — Beatriz Amaral, @imperiodasmaquinasbia e @amarallbeatriz</li>
+          <li>Sobre nós — Império das Máquinas e @imperiodasmaquinasbia</li>
           <li>Contato e orçamento — WhatsApp, Instagram, voltagem no pedido</li>
         </ul>
       </div>
@@ -443,10 +428,9 @@
           <li>Logo circular Império das Máquinas e paleta rose gold / blush / carvão</li>
           <li>Slogan da marca: máquinas para padaria</li>
           <li>Instagram oficial @imperiodasmaquinasbia</li>
-          <li>Perfil citado @amarallbeatriz</li>
           <li>WhatsApp (32) 98481-8603 (wa.me do Instagram)</li>
           <li>BIA em preview — sem inventar preço, prazo ou spec</li>
-          <li>Sem Área do Cliente nesta etapa (login fica na etapa 2)</li>
+          <li>Sem Área do Cliente neste site (login entra no sistema completo)</li>
           <li>Código no GitHub: github.com/klazans-dev/imperiodasmaquinas</li>
         </ul>
       </div>
@@ -456,19 +440,19 @@
     <ul class="checks">
       <li>Mesmas linhas de padaria/confeitaria do site Maquiminas (masseira, cilindro, batedeira, fornos etc.), sem refrigeração</li>
       <li>15 itens demonstrativos com desenho técnico; fotos entram depois sem quebrar o card</li>
-      <li>Textos alinhados ao Instagram: novas, seminovas, revisadas, garantia e melhores condições no atendimento</li>
+      <li>Textos alinhados ao Instagram: novas e revisadas, garantia e melhores condições no atendimento. Seminova entra em reformado.</li>
       <li>Sem inventar CNPJ, endereço, PIX da loja, parcelas ou raio de frete</li>
-      <li>Site estático, seguro no front (sem senhas) e preparado para API na etapa 2</li>
+      <li>Site estático, seguro no front (sem senhas) e preparado para API no sistema completo</li>
     </ul>
 
     <section class="extra" aria-label="Página extra — escopo do site">
-      <p class="extra-kicker"><span>Callinfo · Proposta IM-2026-1030 · página extra 1</span><span>Escopo do site × etapa 2</span></p>
+      <p class="extra-kicker"><span>Callinfo · Proposta IM-2026-1030 · página extra 1</span><span>Escopo do site × sistema completo</span></p>
       <h2>4. O que o Instagram pediu e o que o site já tem</h2>
       <p class="small">Recorte do perfil @imperiodasmaquinasbia + logo oficial, comparado com o site em 30/10/2026. Login e produtos oficiais ficam de fora desta cobrança.</p>
 
       <div class="stats">
         <div class="stat"><b>11</b><span>Itens no ar</span></div>
-        <div class="stat"><b>4</b><span>Etapa 2 / ativo cliente</span></div>
+        <div class="stat"><b>4</b><span>Sistema / ativo cliente</span></div>
         <div class="stat"><b>8</b><span>Páginas públicas</span></div>
         <div class="stat"><b>15</b><span>Itens demonstrativos</span></div>
       </div>
@@ -478,7 +462,7 @@
       <p class="small">Gráfico 3 — verde = entregue no site (R$ 1.800). Amarelo = login, produtos ERP, fotos reais ou dados cadastrais ainda não informados.</p>
 
       <div class="chart-wrap" style="margin-top:12px">
-        <svg viewBox="0 0 120 120" width="160" height="160" aria-label="Itens no ar versus etapa 2">
+        <svg viewBox="0 0 120 120" width="160" height="160" aria-label="Itens no ar versus sistema completo">
           <title>11 itens no site e 4 pendentes, de 15 combinados</title>
           <circle cx="60" cy="60" r="40" fill="none" stroke="#1f7a4a" stroke-width="18" stroke-dasharray="184.3 251.33" transform="rotate(-90 60 60)"/>
           <circle cx="60" cy="60" r="40" fill="none" stroke="#ffc20e" stroke-width="18" stroke-dasharray="67 251.33" stroke-dashoffset="-184.3" transform="rotate(-90 60 60)"/>
@@ -490,12 +474,12 @@
             <div class="bar-row"><span>Páginas no ar</span><div class="track"><div class="fill" style="width:100%;background:#041d3f"></div></div><strong>8 / 8</strong></div>
             <div class="bar-row"><span>Categorias</span><div class="track"><div class="fill" style="width:87.5%;background:#0057c8"></div></div><strong>7</strong></div>
             <div class="bar-row"><span>Catálogo demo</span><div class="track"><div class="fill" style="width:100%;background:#c17f72"></div></div><strong>15</strong></div>
-            <div class="bar-row"><span>Login / produtos ERP</span><div class="track"><div class="fill" style="width:0%;background:#ffc20e"></div></div><strong>0 · etapa 2</strong></div>
+            <div class="bar-row"><span>Login / produtos ERP</span><div class="track"><div class="fill" style="width:0%;background:#ffc20e"></div></div><strong>0 · sistema</strong></div>
           </div>
           <p class="small" style="margin-top:8px">Gráfico 4 — pizza: 11 no ar (verde) e 4 pendentes (amarelo), base 15. Gráfico 5 — páginas, categorias, demonstrativos e sistema. Fonte: Instagram + site · 30/10/2026.</p>
           <div class="legend">
             <span><i class="sw" style="background:#1f7a4a"></i>No site (11)</span>
-            <span><i class="sw" style="background:#ffc20e"></i>Etapa 2 / ativo cliente (4)</span>
+            <span><i class="sw" style="background:#ffc20e"></i>Sistema / ativo cliente (4)</span>
           </div>
         </div>
       </div>
@@ -515,10 +499,9 @@
         <tbody>
           <tr><td>Marca Império das Máquinas</td><td>Título, header, rodapé, SEO</td><td><span class="dot dot--ok"></span>No ar</td></tr>
           <tr><td>Máquinas para padaria</td><td>Hero, Sobre, meta description</td><td><span class="dot dot--ok"></span>No ar</td></tr>
-          <tr><td>Beatriz Amaral</td><td>Sobre, Instagram pessoal, assinatura</td><td><span class="dot dot--ok"></span>No ar</td></tr>
+          <tr><td>Beatriz Amaral</td><td>Sobre e assinatura</td><td><span class="dot dot--ok"></span>No ar</td></tr>
           <tr><td>@imperiodasmaquinasbia</td><td>Header, home, contato, rodapé</td><td><span class="dot dot--ok"></span>No ar</td></tr>
-          <tr><td>@amarallbeatriz</td><td>Home e Sobre</td><td><span class="dot dot--ok"></span>No ar</td></tr>
-          <tr><td>Novas · Seminovas · Revisadas</td><td>Faixa da home, Condições, Sobre</td><td><span class="dot dot--ok"></span>No ar</td></tr>
+          <tr><td>Novas · Revisadas</td><td>Faixa da home, Condições, Sobre. Seminova entra em reformado.</td><td><span class="dot dot--ok"></span>No ar</td></tr>
           <tr><td>Garantia</td><td>Condições, Sobre, BIA</td><td><span class="dot dot--ok"></span>No ar</td></tr>
           <tr><td>Melhores condições no atendimento</td><td>Home, Condições, orçamento</td><td><span class="dot dot--ok"></span>No ar</td></tr>
           <tr><td>WhatsApp wa.me/5532984818603</td><td>Header, rodapé, FAB, formulários</td><td><span class="dot dot--ok"></span>No ar</td></tr>
@@ -537,17 +520,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Login / Área do Cliente</td><td>Funcionalidade de sistema</td><td><span class="dot dot--wait"></span>Etapa 2 · à parte</td></tr>
-          <tr><td>Cadastro oficial de produtos no ERP</td><td>Catálogo ainda demonstrativo</td><td><span class="dot dot--wait"></span>Etapa 2 · à parte</td></tr>
-          <tr><td>BIA/AXIA online (API)</td><td>Hoje só preview</td><td><span class="dot dot--wait"></span>Etapa 2 plus · à parte</td></tr>
+          <tr><td>Login / Área do Cliente</td><td>Funcionalidade de sistema</td><td><span class="dot dot--wait"></span>Sistema completo · à parte</td></tr>
+          <tr><td>Cadastro oficial de produtos no ERP</td><td>Catálogo ainda demonstrativo</td><td><span class="dot dot--wait"></span>Sistema completo · à parte</td></tr>
+          <tr><td>BIA/AXIA online (API)</td><td>Hoje só preview</td><td><span class="dot dot--wait"></span>Sistema completo · à parte</td></tr>
           <tr><td>Fotos reais das máquinas</td><td>Dependem de arquivo do cliente</td><td><span class="dot dot--wait"></span>Ativo Império</td></tr>
         </tbody>
       </table>
-      <p class="small">Leitura: o site institucional combinado com a logo e o Instagram já está entregue. Sistema (login e produtos) é a segunda etapa e só é cobrado se for contratado.</p>
+      <p class="small">Leitura: o site institucional combinado com a logo e o Instagram já está entregue. O sistema completo só é cobrado se for contratado: R$ 2.500,00 e mensalidade de R$ 299,99.</p>
     </section>
 
-    <h2>5. Segunda etapa — login e produtos (cobrado à parte)</h2>
-    <p>Não faz parte do PIX de R$ 1.800,00. Referência de implantação, quando autorizada:</p>
+    <h2>5. Sistema completo (cobrado à parte)</h2>
+    <p>Não faz parte do PIX de R$ 1.800,00. Implantação de <strong>R$ 2.500,00</strong> e mensalidade de <strong>R$ 299,99</strong>, quando autorizada:</p>
     <table>
       <thead>
         <tr><th>Item</th><th>Entrega</th></tr>
@@ -560,51 +543,45 @@
         <tr><td>Segurança</td><td>Nenhuma chave do ERP no navegador; site só chama URL pública.</td></tr>
       </tbody>
     </table>
-    <p class="small">Sistema básico: R$ 4.500,00. Sistema completo (inclui o básico + assistente online + logística no orçamento): R$ 8.000,00. O completo substitui o básico; não soma. Nova proposta quando for a hora.</p>
+    <p class="small">Uma única opção: sistema completo por R$ 2.500,00. A mensalidade de R$ 299,99 cobre manutenção constante, melhorias de funcionamento e integrações com APIs de terceiros.</p>
 
     <h2>6. Fora deste orçamento</h2>
     <ul class="checks">
-      <li>Login, cadastro de produtos e Área do Cliente (etapa 2, cobrada à parte)</li>
+      <li>Sistema completo: implantação R$ 2.500,00 e mensalidade R$ 299,99 (manutenção constante, melhorias de funcionamento e integrações com APIs de terceiros)</li>
       <li>Domínio, hospedagem do site estático e anúncios pagos</li>
       <li>Produção fotográfica (o Império envia as fotos dos equipamentos)</li>
       <li>CNPJ, e-mail, telefone, horário e endereço de rua, quando forem informados, entram no site sem pacote extra de implantação do site</li>
     </ul>
 
     <h2>7. Pagamento — PIX do site</h2>
-    <p>Cobrança desta proposta: <strong>Site Império das Máquinas · R$ 1.800,00</strong>. Chave PIX tipo <strong>CNPJ</strong> <strong>28044529000126</strong>. Copie o número ou escaneie o QR (cobrança Callinfo de site R$ 1.800,00). A etapa 2 não usa este PIX até haver aceite específico.</p>
+    <p>Cobrança desta proposta: <strong>Site Império das Máquinas · R$ 1.800,00</strong>. Pague pela chave PIX tipo <strong>CNPJ</strong>. O sistema completo não usa este PIX até haver aceite específico.</p>
     <div class="pix">
-      <div>
-        <p class="kicker">Chave PIX · CNPJ</p>
-        <p class="pix-key">28044529000126</p>
-        <p><strong>Beneficiário:</strong> Alexandre Calazans dos Santos<br>
-        <strong>CNPJ:</strong> 28.044.529/0001-26<br>
-        <strong>Descrição:</strong> Site Império das Máquinas<br>
-        <strong>Valor:</strong> R$ 1.800,00<br>
-        <strong>Vencimento desta proposta:</strong> 14/11/2026</p>
-        <p class="small">Sem multa, juros ou desconto nesta cobrança. Emissão 30/10/2026. Se o QR impresso ao lado mostrar outro vencimento, pague pela chave CNPJ no valor de R$ 1.800,00.</p>
-      </div>
-      <div>
-        <p class="kicker">QR Code PIX</p>
-        <img src="../Public/pix.jpeg" alt="QR Code PIX Callinfo, chave CNPJ 28044529000126, cobrança de site R$ 1.800,00" width="720" height="540">
-      </div>
+      <p class="kicker">Chave PIX · CNPJ</p>
+      <p class="pix-key">28044529000126</p>
+      <p><strong>Beneficiário:</strong> Alexandre Calazans dos Santos<br>
+      <strong>CNPJ:</strong> 28.044.529/0001-26<br>
+      <strong>Descrição:</strong> Site Império das Máquinas<br>
+      <strong>Valor:</strong> R$ 1.800,00<br>
+      <strong>Vencimento desta proposta:</strong> 14/11/2026</p>
+      <p class="small">Sem multa, juros ou desconto nesta cobrança. Emissão 30/10/2026. Pague pela chave CNPJ no valor de R$ 1.800,00.</p>
     </div>
 
     <h2>8. Como seguir</h2>
     <p>1. Aceitar esta proposta referente ao <strong>site (R$ 1.800,00)</strong>.<br>
-    2. Pagar a implantação via PIX (chave CNPJ <strong>28044529000126</strong> ou QR desta seção).<br>
+    2. Pagar a implantação via PIX na chave CNPJ <strong>28044529000126</strong>.<br>
     3. Site já está entregue em <strong>D:\Imperio das Maquinas</strong> e no GitHub <strong>klazans-dev/imperiodasmaquinas</strong>.<br>
-    4. Login e produtos: somente quando quiserem a segunda etapa — nova proposta, valor à parte.</p>
+    4. Sistema completo: somente quando quiserem — implantação de R$ 2.500,00 e mensalidade de R$ 299,99.</p>
 
     <div class="sign">
       <p>Império das Máquinas<br><span class="small">Beatriz Amaral · aceite da proposta IM-2026-1030</span></p>
       <p>
         <img src="marcas/callinfo.png" alt="Callinfo Tecnologia" style="height:40px;background:#000;padding:6px 10px">
-        Callinfo Tecnologia<br><span class="small">Site agora · ERP (login e produtos) na etapa 2</span>
+        Callinfo Tecnologia<br><span class="small">Site agora · sistema completo à parte</span>
       </p>
     </div>
 
     <p class="foot-note">
-      Valores em reais, tabela Cliente Parceiro — indicação família. Cobrança desta via: somente site R$ 1.800,00 (PIX 28044529000126). Login e produtos = segunda etapa, cobrada à parte. 30/10/2026.
+      Valores em reais, tabela Cliente Parceiro — indicação família. Cobrança desta via: somente site R$ 1.800,00 (PIX 28044529000126). Sistema completo: R$ 2.500,00 + R$ 299,99/mês, cobrado à parte. 30/10/2026.
     </p>
   </article>
 </body>

@@ -83,15 +83,18 @@
     const partes = [];
     if (/cnpj|quem somos|bia|beatriz|amaral|historia da empresa|instagram/.test(text)) {
       partes.push(
-        `O Império das Máquinas é a marca de ${emp.responsavel || 'Beatriz Amaral'} (${emp.instagramPessoal || '@amarallbeatriz'}) para ${emp.slogan || 'máquinas de padaria'}. ` +
-        `Instagram oficial: ${config.instagramUsuario || '@imperiodasmaquinasbia'}.`
+        `O Império das Máquinas trabalha com ${emp.slogan || 'máquinas de padaria'}. ` +
+        `Instagram oficial da empresa: ${config.instagramUsuario || '@imperiodasmaquinasbia'}.`
       );
     }
     if (/pag|parcel|boleto|entrada|prazo de pag|forma de pag|condic|pix|cartao|melhor/.test(text)) {
       partes.push('As melhores condições são combinadas no atendimento. Valores, parcelas e formas de pagamento saem no orçamento.');
     }
-    if (/nova|seminova|revisad|usada|semi/.test(text) && c.linhasEquipamento) {
-      partes.push(`Linhas: ${c.linhasEquipamento.join(', ')}.`);
+    if (/nova|seminova|revisad|reformad|usada|semi/.test(text) && c.linhasEquipamento) {
+      partes.push(`Linhas: ${c.linhasEquipamento.join(' e ')}.`);
+      if (/seminova|semi[-\s]?nova|reformad/.test(text)) {
+        partes.push('Seminova não é uma linha à parte: já entra no equipamento reformado, dentro de revisadas.');
+      }
     }
     if (/voltag|220|380|tensao|energia/.test(text) && c.voltagemObrigatoria) {
       partes.push('Voltagem: informe se a rede é 220 V ou 380 V para o orçamento.');
@@ -100,7 +103,7 @@
       partes.push('Frete e prazos são informados no orçamento, conforme destino e equipamento.');
     }
     if (/garantia/.test(text) && c.garantia) {
-      partes.push('Há garantia. O prazo e a cobertura dependem da condição do equipamento (nova, seminova ou revisada) e são confirmados no orçamento.');
+      partes.push('Há garantia. O prazo e a cobertura dependem da condição do equipamento (nova ou revisada) e são confirmados no orçamento.');
     }
     if (!partes.length) return null;
     return { texto: partes.join('\n\n'), acoes: ['condicoes', 'orcamento', 'especialista'] };

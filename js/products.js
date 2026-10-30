@@ -331,7 +331,7 @@
         </div>
         <div class="product__terms">
           <ul>
-            <li>${icon('wallet')}<span>Máquinas <strong>novas, seminovas e revisadas</strong>, com as melhores condições no atendimento.</span></li>
+            <li>${icon('wallet')}<span>Máquinas <strong>novas e revisadas</strong>, com as melhores condições no atendimento.</span></li>
             <li>${icon('shield')}<span><strong>Garantia</strong> conforme a condição do equipamento, informada no orçamento.</span></li>
             <li>${icon('instagram')}<span>Atendimento pelo WhatsApp e Instagram <strong>@imperiodasmaquinasbia</strong></span></li>
           </ul>

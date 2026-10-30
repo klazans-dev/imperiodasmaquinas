@@ -23,7 +23,7 @@
  *   aplicacao: "",
  *   observacoes: "",
  *   especificacoes: [],  // [{ rotulo: "", valor: "" }]
- *   condicao: "",        // "novo" | "semi-novo" | "reformado"
+ *   condicao: "",        // "novo" | "reformado" (seminova entra em reformado)
  *   equivalentes: [],    // ids de produtos equivalentes (mesma função, outra marca/modelo)
  *   disponivel: null,    // true | false | null (null = "Consulte disponibilidade")
  *   destaque: false,
