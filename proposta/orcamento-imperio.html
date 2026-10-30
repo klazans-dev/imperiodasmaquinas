@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proposta comercial | Site — Império das Máquinas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+  <style>
+    :root {
+      --ink: #041d3f;
+      --steel: #123a70;
+      --accent: #0057c8;
+      --yellow: #ffc20e;
+      --on-yellow: #06254f;
+      --bg: #f2f5f9;
+      --line: #dbe3ed;
+      --muted: #4f5f74;
+      --text: #0d1b2e;
+      --white: #fff;
+      --rose: #c17f72;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 11.5px; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: Inter, system-ui, sans-serif;
+      line-height: 1.45;
+    }
+    .sheet {
+      max-width: 210mm;
+      margin: 24px auto 80px;
+      background: var(--white);
+      padding: 18mm 16mm 16mm;
+      border: 1px solid var(--line);
+    }
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      max-width: 210mm;
+      margin: 16px auto 0;
+      padding: 10px 14px;
+      background: var(--ink);
+      color: #c6d4e8;
+      font-size: 13px;
+    }
+    .toolbar strong { color: var(--yellow); }
+    .toolbar button {
+      border: 0;
+      background: var(--yellow);
+      color: var(--on-yellow);
+      font-weight: 700;
+      padding: 10px 16px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    h1, h2, h3 { font-family: "Barlow Condensed", sans-serif; text-transform: uppercase; letter-spacing: 0.02em; margin: 0; }
+    h1 { font-size: 32px; line-height: 0.95; color: var(--ink); }
+    h2 { font-size: 18px; color: var(--ink); margin: 22px 0 10px; border-bottom: 2px solid var(--yellow); padding-bottom: 4px; }
+    h3 { font-size: 14px; color: var(--steel); margin: 0 0 6px; }
+    p { margin: 0 0 8px; }
+    .muted { color: var(--muted); }
+    .small { font-size: 11px; color: var(--muted); }
+    .brandbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: #000;
+      color: #9ad4ff;
+      margin: -18mm -16mm 16px;
+      padding: 14px 16mm;
+    }
+    .logo-callinfo { height: 52px; width: auto; display: block; }
+    .brandbar .who { font-size: 11px; text-align: right; line-height: 1.35; }
+    .brandbar .who strong { display: block; color: #fff; font-size: 13px; }
+    .head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: start;
+      padding-bottom: 14px;
+      border-bottom: 4px solid var(--ink);
+    }
+    .logo { height: 72px; width: 72px; object-fit: cover; border-radius: 50%; background: #fffdfb; }
+    .meta { text-align: right; font-size: 11px; color: var(--muted); }
+    .meta strong { display: block; color: var(--ink); font-size: 13px; }
+    .hook {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      align-items: center;
+      background: var(--ink);
+      color: #c6d4e8;
+      padding: 14px 16px;
+      margin: 14px 0 4px;
+    }
+    .hook-mark {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #06244c;
+      flex: none;
+    }
+    .hook-mark img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hook h2 { color: #fff; border: 0; margin: 6px 0 6px; padding: 0; font-size: 22px; }
+    .hook p { margin: 0; }
+    .hook .tag { background: var(--yellow); }
+    .parties {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 14px 0 6px;
+    }
+    .sign img { height: 36px; display: block; margin-bottom: 8px; }
+    .pix {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 14px;
+      align-items: start;
+      margin-top: 10px;
+    }
+    .pix-key {
+      font-family: ui-monospace, Consolas, "Courier New", monospace;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      background: #fff;
+      border: 1px dashed var(--accent);
+      padding: 10px 12px;
+      word-break: break-all;
+    }
+    .pix img {
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      display: block;
+    }
+    .card {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      background: var(--bg);
+    }
+    .kicker { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+    ul.checks { margin: 0; padding: 0; list-style: none; }
+    ul.checks li { padding: 3px 0 3px 16px; position: relative; }
+    ul.checks li::before { content: ""; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; background: var(--yellow); }
+    table { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+    th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { background: var(--ink); color: #fff; font-weight: 600; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; }
+    td.num, th.num { text-align: right; white-space: nowrap; }
+    tfoot td { font-weight: 700; background: #fff8dd; border-bottom: 0; }
+    .pkg {
+      border: 1px solid var(--line);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-height: 100%;
+    }
+    .pkg--rec { border: 2px solid var(--ink); background: #f7f9fc; }
+    .pkg--later { opacity: 0.92; background: #fff; }
+    .pkg .price { font-family: "Barlow Condensed", sans-serif; font-size: 28px; font-weight: 700; color: var(--ink); }
+    .pkg .month { font-size: 13px; font-weight: 700; color: var(--accent); }
+    .partner {
+      background: #fff8dd;
+      border: 1px solid var(--yellow);
+      padding: 10px 12px;
+      margin: 12px 0 0;
+      font-size: 12px;
+    }
+    .now {
+      background: #eef7f1;
+      border: 1px solid #1f7a4a;
+      padding: 10px 12px;
+      margin: 12px 0 0;
+      font-size: 12px;
+    }
+    .tag { display: inline-block; background: var(--yellow); color: var(--on-yellow); font-size: 10px; font-weight: 700; padding: 2px 7px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .tag--ok { background: #1f7a4a; color: #fff; }
+    .tag--wait { background: #e8c4b8; color: #3a2c2c; }
+    .chart-wrap { display: grid; grid-template-columns: 180px 1fr; gap: 16px; align-items: center; }
+    .bars { display: grid; gap: 8px; }
+    .bar-row { display: grid; grid-template-columns: 150px 1fr 88px; gap: 8px; align-items: center; font-size: 11px; }
+    .track { height: 14px; background: #e6edf6; }
+    .fill { height: 100%; background: var(--accent); }
+    .fill--site { background: var(--ink); width: 18.4%; }
+    .fill--b { background: var(--accent); width: 45.9%; }
+    .fill--c { background: var(--yellow); width: 81.6%; }
+    .legend { display: flex; flex-wrap: wrap; gap: 10px 16px; font-size: 11px; margin-top: 8px; }
+    .sw { display: inline-block; width: 10px; height: 10px; margin-right: 6px; vertical-align: -1px; }
+    .foot-note { margin-top: 18px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 10.5px; color: var(--muted); }
+    .sign { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px; }
+    .sign p { border-top: 1px solid var(--ink); padding-top: 6px; margin-top: 36px; font-size: 11px; }
+    @media print {
+      html { font-size: 10.5px; }
+      body { background: #fff; }
+      .toolbar { display: none; }
+      .sheet { margin: 0; border: 0; max-width: none; padding: 0; }
+      .brandbar { margin: 0 0 12px; padding: 10px 0; }
+      h2 { break-after: avoid; }
+      .pix, .pkg, .card, table, .chart-wrap, .hook, .brandbar, .stats { break-inside: avoid; }
+      .extra { break-before: page; }
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin: 10px 0 14px;
+    }
+    .stat {
+      border: 1px solid var(--line);
+      padding: 10px 8px;
+      text-align: center;
+      background: var(--bg);
+    }
+    .stat b {
+      display: block;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 28px;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      font-size: 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .usage { display: flex; height: 14px; background: #e6edf6; margin: 6px 0 4px; }
+    .usage .ok { width: 73.3%; background: #1f7a4a; }
+    .usage .wait { width: 26.7%; background: var(--yellow); }
+    .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+    .dot--ok { background: #1f7a4a; }
+    .dot--wait { background: #c47b00; }
+    .extra {
+      break-before: page;
+      page-break-before: always;
+      padding-top: 2mm;
+    }
+    .extra-kicker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    table.compact td, table.compact th { padding: 5px 6px; font-size: 10.5px; }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <span>Proposta IM-2026-1030 · <strong>Ctrl+P</strong> → Destino: Salvar como PDF · A4</span>
+    <button type="button" onclick="window.print()">Gerar PDF</button>
+  </div>
+
+  <article class="sheet">
+    <div class="brandbar">
+      <img class="logo-callinfo" src="marcas/callinfo.png" alt="Callinfo Tecnologia">
+      <div class="who">
+        <strong>Callinfo Tecnologia</strong>
+        Emitente desta proposta<br>
+        Site institucional e ERP Callinfo
+      </div>
+    </div>
+
+    <header class="head">
+      <div>
+        <p class="kicker">Proposta comercial</p>
+        <h1>Site institucional</h1>
+        <p class="muted">Para Império das Máquinas. Cobrança desta proposta: somente o site. Login e cadastro de produtos ficam para a segunda etapa, cobrada à parte.</p>
+      </div>
+      <div class="meta">
+        <img class="logo" src="../assets/images/logo-imperio.jpg" alt="Império das Máquinas">
+        <strong>Proposta n.º IM-2026-1030</strong>
+        Data: 30/10/2026<br>
+        Validade: 15 dias (até 14/11/2026)<br>
+        Moeda: Real (BRL)<br>
+        Tabela: Cliente Parceiro — indicação família
+      </div>
+    </header>
+
+    <aside class="hook" aria-label="BIA, função gancho">
+      <div class="hook-mark">
+        <img src="marcas/axia.jpg" alt="Assistente no site">
+      </div>
+      <div>
+        <span class="tag">Função gancho</span>
+        <h2>BIA</h2>
+        <p>A BIA já aparece no site como assistente do Império das Máquinas: saúda o visitante, encaminha para orçamento, catálogo, Instagram ou especialista e só fala o que está cadastrado — sem inventar preço, prazo ou especificação.</p>
+        <p style="margin-top:8px">No site (R$ 1.800) ela opera em <strong style="color:#fff">preview</strong>. Login, produtos reais e assistente ligada ao ERP entram na <strong style="color:#ffc20e">segunda etapa</strong>, cobrada à parte.</p>
+      </div>
+    </aside>
+
+    <div class="parties">
+      <div class="card">
+        <p class="kicker">Cliente</p>
+        <h3>Império das Máquinas</h3>
+        <p>Beatriz Amaral<br>
+        Máquinas para padaria · novas, seminovas e revisadas<br>
+        WhatsApp (32) 98481-8603<br>
+        Instagram @imperiodasmaquinasbia · @amarallbeatriz</p>
+      </div>
+      <div class="card">
+        <p class="kicker">Emitente</p>
+        <h3>Callinfo Tecnologia</h3>
+        <p>Site institucional, e, em etapa posterior, ERP Callinfo (login e produtos).<br>
+        PIX (CNPJ): <strong>28044529000126</strong><br>
+        Alexandre Calazans dos Santos · CNPJ 28.044.529/0001-26</p>
+      </div>
+    </div>
+
+    <div class="now">
+      <span class="tag tag--ok">Cobrança desta proposta</span>
+      <p style="margin:8px 0 0"><strong>Somente o site: R$ 1.800,00.</strong> PIX chave CNPJ <strong>28044529000126</strong>. Login, catálogo oficial de produtos e Área do Cliente <strong>não entram neste valor</strong> — segunda etapa, cobrada à parte, sob nova proposta.</p>
+    </div>
+
+    <div class="partner">
+      <span class="tag">Cliente parceiro</span>
+      <p style="margin:8px 0 0"><strong>Indicação família.</strong> Os valores de implantação da etapa 2, quando forem contratados, seguem a tabela de cliente parceiro. Não há cobrança de sistema nesta fatura.</p>
+    </div>
+
+    <h2>1. Investimento</h2>
+    <div class="grid-3">
+      <div class="pkg pkg--rec">
+        <span class="tag tag--ok">Cobrar agora</span>
+        <h3>Site</h3>
+        <p class="price">R$ 1.800</p>
+        <p class="month">Implantação única · desta proposta</p>
+        <p class="small">Site institucional no ar: identidade da logo, Instagram, WhatsApp, catálogo demonstrativo, orçamento, BIA em preview. Sem login e sem produtos oficiais no ERP.</p>
+      </div>
+      <div class="pkg pkg--later">
+        <span class="tag tag--wait">Etapa 2 · à parte</span>
+        <h3>Sistema · login e produtos</h3>
+        <p class="price">R$ 4.500</p>
+        <p class="month">Não incluso neste PIX</p>
+        <p class="small">Área do Cliente (login Callinfo), catálogo oficial no lugar dos demonstrativos, leads no ERP. Cobrado à parte, quando autorizar a segunda etapa.</p>
+      </div>
+      <div class="pkg pkg--later">
+        <span class="tag tag--wait">Etapa 2 plus · à parte</span>
+        <h3>Sistema completo</h3>
+        <p class="price">R$ 8.000</p>
+        <p class="month">Não incluso neste PIX</p>
+        <p class="small">Inclui login e produtos, mais BIA/AXIA online e cotação de transporte no orçamento. Substitui o sistema básico; não soma. Cobrado à parte.</p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:10px">O PIX desta proposta é <strong>apenas R$ 1.800,00 (site)</strong>. Os valores de R$ 4.500 e R$ 8.000 são referência da etapa 2 e só vigoram após aceite específico dessa etapa.</p>
+
+    <table style="margin-top:10px">
+      <thead>
+        <tr>
+          <th>Etapa</th>
+          <th>O que entra</th>
+          <th class="num">Implantação</th>
+          <th>Nesta cobrança?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1 — Site</td>
+          <td>Entrega já realizada: site público, BIA preview, Instagram e WhatsApp</td>
+          <td class="num">R$ 1.800,00</td>
+          <td><strong>Sim · PIX agora</strong></td>
+        </tr>
+        <tr>
+          <td>2 — Login e produtos</td>
+          <td>Login Callinfo, cadastro de produtos no ERP, catálogo real no site, leads</td>
+          <td class="num">R$ 4.500,00</td>
+          <td>Não · cobrado à parte</td>
+        </tr>
+        <tr>
+          <td>2 plus — Sistema completo</td>
+          <td>Etapa 2 + assistente online + logística no orçamento</td>
+          <td class="num">R$ 8.000,00</td>
+          <td>Não · cobrado à parte</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total a pagar nesta proposta</td>
+          <td class="num">R$ 1.800,00</td>
+          <td>PIX CNPJ 28044529000126</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h2>2. Comparativo (site agora × etapa 2)</h2>
+    <div class="chart-wrap">
+      <svg viewBox="0 0 120 120" width="170" height="170" aria-label="Peso relativo das linhas de preço">
+        <title>Participação das linhas (R$ 1.800 + R$ 4.500 + R$ 8.000 = R$ 14.300)</title>
+        <circle cx="60" cy="60" r="40" fill="none" stroke="#041d3f" stroke-width="18" stroke-dasharray="31.6 251.33" transform="rotate(-90 60 60)"/>
+        <circle cx="60" cy="60" r="40" fill="none" stroke="#0057c8" stroke-width="18" stroke-dasharray="79.1 251.33" stroke-dashoffset="-31.6" transform="rotate(-90 60 60)"/>
+        <circle cx="60" cy="60" r="40" fill="none" stroke="#ffc20e" stroke-width="18" stroke-dasharray="140.6 251.33" stroke-dashoffset="-110.7" transform="rotate(-90 60 60)"/>
+        <text x="60" y="56" text-anchor="middle" font-size="9" font-family="Inter" fill="#4f5f74">Linhas</text>
+        <text x="60" y="68" text-anchor="middle" font-size="11" font-weight="700" font-family="Barlow Condensed" fill="#041d3f">TABELA</text>
+      </svg>
+      <div>
+        <p class="small" style="margin-bottom:10px">Gráfico 1 — peso relativo das linhas (R$ 1.800 + R$ 4.500 + R$ 8.000 = R$ 14.300). Só a fatia do site (R$ 1.800) é cobrada agora.</p>
+        <div class="bars" role="img" aria-label="Implantação por etapa">
+          <div class="bar-row"><span>1 · Site (agora)</span><div class="track"><div class="fill fill--site"></div></div><strong>R$ 1.800</strong></div>
+          <div class="bar-row"><span>2 · Login/produtos</span><div class="track"><div class="fill fill--b"></div></div><strong>R$ 4.500</strong></div>
+          <div class="bar-row"><span>2 plus · Completo</span><div class="track"><div class="fill fill--c"></div></div><strong>R$ 8.000</strong></div>
+        </div>
+        <p class="small" style="margin-top:8px">Gráfico 2 — barras proporcionais a R$ 9.800 (site + sistema completo). Fonte: esta proposta · 30/10/2026.</p>
+        <div class="legend">
+          <span><i class="sw" style="background:#041d3f"></i>Site R$ 1.800 · PIX desta proposta</span>
+          <span><i class="sw" style="background:#0057c8"></i>Etapa 2 R$ 4.500 · à parte</span>
+          <span><i class="sw" style="background:#ffc20e"></i>Etapa 2 plus R$ 8.000 · à parte</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>3. O que já foi feito no site (R$ 1.800)</h2>
+    <div class="grid-2">
+      <div>
+        <h3>Páginas públicas</h3>
+        <ul class="checks">
+          <li>Início — hero com logo, linhas novas/seminovas/revisadas, categorias e destaques</li>
+          <li>Equipamentos — busca, filtros e 15 tipos demonstrativos</li>
+          <li>Produto — ficha, WhatsApp e orçamento</li>
+          <li>Soluções — orientação, montagem, instalação, logística sob consulta</li>
+          <li>Condições — o que o Instagram declara (linhas, garantia, atendimento)</li>
+          <li>Sobre nós — Beatriz Amaral, @imperiodasmaquinasbia e @amarallbeatriz</li>
+          <li>Contato e orçamento — WhatsApp, Instagram, voltagem no pedido</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Identidade e canais</h3>
+        <ul class="checks">
+          <li>Logo circular Império das Máquinas e paleta rose gold / blush / carvão</li>
+          <li>Slogan da marca: máquinas para padaria</li>
+          <li>Instagram oficial @imperiodasmaquinasbia</li>
+          <li>Perfil citado @amarallbeatriz</li>
+          <li>WhatsApp (32) 98481-8603 (wa.me do Instagram)</li>
+          <li>BIA em preview — sem inventar preço, prazo ou spec</li>
+          <li>Sem Área do Cliente nesta etapa (login fica na etapa 2)</li>
+          <li>Código no GitHub: github.com/klazans-dev/imperiodasmaquinas</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:12px">Catálogo e regras no ar</h3>
+    <ul class="checks">
+      <li>Mesmas linhas de padaria/confeitaria do site Maquiminas (masseira, cilindro, batedeira, fornos etc.), sem refrigeração</li>
+      <li>15 itens demonstrativos com desenho técnico; fotos entram depois sem quebrar o card</li>
+      <li>Textos alinhados ao Instagram: novas, seminovas, revisadas, garantia e melhores condições no atendimento</li>
+      <li>Sem inventar CNPJ, endereço, PIX da loja, parcelas ou raio de frete</li>
+      <li>Site estático, seguro no front (sem senhas) e preparado para API na etapa 2</li>
+    </ul>
+
+    <section class="extra" aria-label="Página extra — escopo do site">
+      <p class="extra-kicker"><span>Callinfo · Proposta IM-2026-1030 · página extra 1</span><span>Escopo do site × etapa 2</span></p>
+      <h2>4. O que o Instagram pediu e o que o site já tem</h2>
+      <p class="small">Recorte do perfil @imperiodasmaquinasbia + logo oficial, comparado com o site em 30/10/2026. Login e produtos oficiais ficam de fora desta cobrança.</p>
+
+      <div class="stats">
+        <div class="stat"><b>11</b><span>Itens no ar</span></div>
+        <div class="stat"><b>4</b><span>Etapa 2 / ativo cliente</span></div>
+        <div class="stat"><b>8</b><span>Páginas públicas</span></div>
+        <div class="stat"><b>15</b><span>Itens demonstrativos</span></div>
+      </div>
+
+      <p class="small" style="margin:0"><strong>Cobertura das 15 regras combinadas</strong> · 11 no site · 4 para depois</p>
+      <div class="usage" role="img" aria-label="11 itens no site e 4 pendentes em 15"><span class="ok"></span><span class="wait"></span></div>
+      <p class="small">Gráfico 3 — verde = entregue no site (R$ 1.800). Amarelo = login, produtos ERP, fotos reais ou dados cadastrais ainda não informados.</p>
+
+      <div class="chart-wrap" style="margin-top:12px">
+        <svg viewBox="0 0 120 120" width="160" height="160" aria-label="Itens no ar versus etapa 2">
+          <title>11 itens no site e 4 pendentes, de 15 combinados</title>
+          <circle cx="60" cy="60" r="40" fill="none" stroke="#1f7a4a" stroke-width="18" stroke-dasharray="184.3 251.33" transform="rotate(-90 60 60)"/>
+          <circle cx="60" cy="60" r="40" fill="none" stroke="#ffc20e" stroke-width="18" stroke-dasharray="67 251.33" stroke-dashoffset="-184.3" transform="rotate(-90 60 60)"/>
+          <text x="60" y="54" text-anchor="middle" font-size="9" font-family="Inter" fill="#4f5f74">cobertura</text>
+          <text x="60" y="70" text-anchor="middle" font-size="16" font-weight="700" font-family="Barlow Condensed" fill="#041d3f">73%</text>
+        </svg>
+        <div>
+          <div class="bars" role="img" aria-label="Contagem de páginas e catálogo">
+            <div class="bar-row"><span>Páginas no ar</span><div class="track"><div class="fill" style="width:100%;background:#041d3f"></div></div><strong>8 / 8</strong></div>
+            <div class="bar-row"><span>Categorias</span><div class="track"><div class="fill" style="width:87.5%;background:#0057c8"></div></div><strong>7</strong></div>
+            <div class="bar-row"><span>Catálogo demo</span><div class="track"><div class="fill" style="width:100%;background:#c17f72"></div></div><strong>15</strong></div>
+            <div class="bar-row"><span>Login / produtos ERP</span><div class="track"><div class="fill" style="width:0%;background:#ffc20e"></div></div><strong>0 · etapa 2</strong></div>
+          </div>
+          <p class="small" style="margin-top:8px">Gráfico 4 — pizza: 11 no ar (verde) e 4 pendentes (amarelo), base 15. Gráfico 5 — páginas, categorias, demonstrativos e sistema. Fonte: Instagram + site · 30/10/2026.</p>
+          <div class="legend">
+            <span><i class="sw" style="background:#1f7a4a"></i>No site (11)</span>
+            <span><i class="sw" style="background:#ffc20e"></i>Etapa 2 / ativo cliente (4)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="extra" aria-label="Página extra — tabelas">
+      <p class="extra-kicker"><span>Callinfo · Proposta IM-2026-1030 · página extra 2</span><span>Detalhe Instagram × site</span></p>
+      <h2>4.1 Instagram e logo — o que entrou no site</h2>
+      <table class="compact">
+        <thead>
+          <tr>
+            <th>Combinado (logo / Instagram)</th>
+            <th>Onde está no site</th>
+            <th>Situação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Marca Império das Máquinas</td><td>Título, header, rodapé, SEO</td><td><span class="dot dot--ok"></span>No ar</td></tr>
+          <tr><td>Máquinas para padaria</td><td>Hero, Sobre, meta description</td><td><span class="dot dot--ok"></span>No ar</td></tr>
+          <tr><td>Beatriz Amaral</td><td>Sobre, Instagram pessoal, assinatura</td><td><span class="dot dot--ok"></span>No ar</td></tr>
+          <tr><td>@imperiodasmaquinasbia</td><td>Header, home, contato, rodapé</td><td><span class="dot dot--ok"></span>No ar</td></tr>
+          <tr><td>@amarallbeatriz</td><td>Home e Sobre</td><td><span class="dot dot--ok"></span>No ar</td></tr>
+          <tr><td>Novas · Seminovas · Revisadas</td><td>Faixa da home, Condições, Sobre</td><td><span class="dot dot--ok"></span>No ar</td></tr>
+          <tr><td>Garantia</td><td>Condições, Sobre, BIA</td><td><span class="dot dot--ok"></span>No ar</td></tr>
+          <tr><td>Melhores condições no atendimento</td><td>Home, Condições, orçamento</td><td><span class="dot dot--ok"></span>No ar</td></tr>
+          <tr><td>WhatsApp wa.me/5532984818603</td><td>Header, rodapé, FAB, formulários</td><td><span class="dot dot--ok"></span>No ar</td></tr>
+          <tr><td>Cores da logo (rose gold / blush / carvão)</td><td>CSS global, header, ilustrações</td><td><span class="dot dot--ok"></span>No ar</td></tr>
+          <tr><td>Mesmas máquinas de padaria (catálogo)</td><td>15 demonstrativos, 7 categorias</td><td><span class="dot dot--ok"></span>No ar</td></tr>
+        </tbody>
+      </table>
+
+      <h2>4.2 O que não entra neste PIX</h2>
+      <table class="compact">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Por que não está nesta cobrança</th>
+            <th>Situação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Login / Área do Cliente</td><td>Funcionalidade de sistema</td><td><span class="dot dot--wait"></span>Etapa 2 · à parte</td></tr>
+          <tr><td>Cadastro oficial de produtos no ERP</td><td>Catálogo ainda demonstrativo</td><td><span class="dot dot--wait"></span>Etapa 2 · à parte</td></tr>
+          <tr><td>BIA/AXIA online (API)</td><td>Hoje só preview</td><td><span class="dot dot--wait"></span>Etapa 2 plus · à parte</td></tr>
+          <tr><td>Fotos reais das máquinas</td><td>Dependem de arquivo do cliente</td><td><span class="dot dot--wait"></span>Ativo Império</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Leitura: o site institucional combinado com a logo e o Instagram já está entregue. Sistema (login e produtos) é a segunda etapa e só é cobrado se for contratado.</p>
+    </section>
+
+    <h2>5. Segunda etapa — login e produtos (cobrado à parte)</h2>
+    <p>Não faz parte do PIX de R$ 1.800,00. Referência de implantação, quando autorizada:</p>
+    <table>
+      <thead>
+        <tr><th>Item</th><th>Entrega</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Login / Área do Cliente</td><td>Acesso ao ERP Callinfo. O site continua sem painel local nem senhas no front.</td></tr>
+        <tr><td>Produtos oficiais</td><td>Itens cadastrados no Callinfo aparecem na home e em Equipamentos; demonstrativos saem do ar.</td></tr>
+        <tr><td>Leads</td><td>Orçamentos e contatos do site entram no ERP.</td></tr>
+        <tr><td>Fotos</td><td>Galeria nas fichas; o card pode manter o desenho até definir foto no card.</td></tr>
+        <tr><td>Segurança</td><td>Nenhuma chave do ERP no navegador; site só chama URL pública.</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Sistema básico: R$ 4.500,00. Sistema completo (inclui o básico + assistente online + logística no orçamento): R$ 8.000,00. O completo substitui o básico; não soma. Nova proposta quando for a hora.</p>
+
+    <h2>6. Fora deste orçamento</h2>
+    <ul class="checks">
+      <li>Login, cadastro de produtos e Área do Cliente (etapa 2, cobrada à parte)</li>
+      <li>Domínio, hospedagem do site estático e anúncios pagos</li>
+      <li>Produção fotográfica (o Império envia as fotos dos equipamentos)</li>
+      <li>CNPJ, e-mail, telefone, horário e endereço de rua, quando forem informados, entram no site sem pacote extra de implantação do site</li>
+    </ul>
+
+    <h2>7. Pagamento — PIX do site</h2>
+    <p>Cobrança desta proposta: <strong>Site Império das Máquinas · R$ 1.800,00</strong>. Chave PIX tipo <strong>CNPJ</strong> <strong>28044529000126</strong>. Copie o número ou escaneie o QR (cobrança Callinfo de site R$ 1.800,00). A etapa 2 não usa este PIX até haver aceite específico.</p>
+    <div class="pix">
+      <div>
+        <p class="kicker">Chave PIX · CNPJ</p>
+        <p class="pix-key">28044529000126</p>
+        <p><strong>Beneficiário:</strong> Alexandre Calazans dos Santos<br>
+        <strong>CNPJ:</strong> 28.044.529/0001-26<br>
+        <strong>Descrição:</strong> Site Império das Máquinas<br>
+        <strong>Valor:</strong> R$ 1.800,00<br>
+        <strong>Vencimento desta proposta:</strong> 14/11/2026</p>
+        <p class="small">Sem multa, juros ou desconto nesta cobrança. Emissão 30/10/2026. Se o QR impresso ao lado mostrar outro vencimento, pague pela chave CNPJ no valor de R$ 1.800,00.</p>
+      </div>
+      <div>
+        <p class="kicker">QR Code PIX</p>
+        <img src="../Public/pix.jpeg" alt="QR Code PIX Callinfo, chave CNPJ 28044529000126, cobrança de site R$ 1.800,00" width="720" height="540">
+      </div>
+    </div>
+
+    <h2>8. Como seguir</h2>
+    <p>1. Aceitar esta proposta referente ao <strong>site (R$ 1.800,00)</strong>.<br>
+    2. Pagar a implantação via PIX (chave CNPJ <strong>28044529000126</strong> ou QR desta seção).<br>
+    3. Site já está entregue em <strong>D:\Imperio das Maquinas</strong> e no GitHub <strong>klazans-dev/imperiodasmaquinas</strong>.<br>
+    4. Login e produtos: somente quando quiserem a segunda etapa — nova proposta, valor à parte.</p>
+
+    <div class="sign">
+      <p>Império das Máquinas<br><span class="small">Beatriz Amaral · aceite da proposta IM-2026-1030</span></p>
+      <p>
+        <img src="marcas/callinfo.png" alt="Callinfo Tecnologia" style="height:40px;background:#000;padding:6px 10px">
+        Callinfo Tecnologia<br><span class="small">Site agora · ERP (login e produtos) na etapa 2</span>
+      </p>
+    </div>
+
+    <p class="foot-note">
+      Valores em reais, tabela Cliente Parceiro — indicação família. Cobrança desta via: somente site R$ 1.800,00 (PIX 28044529000126). Login e produtos = segunda etapa, cobrada à parte. 30/10/2026.
+    </p>
+  </article>
+</body>
+</html>
