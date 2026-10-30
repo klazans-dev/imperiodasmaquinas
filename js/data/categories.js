@@ -1,0 +1,49 @@
+/**
+ * Categorias do catálogo (editáveis).
+ * `slug` é usado na URL: equipamentos.html?categoria=<slug>
+ * `imagem` aceita foto real (recomendado: .webp 800x600) ou a ilustração padrão.
+ */
+window.MAQUIMINAS_CATEGORIES = [
+  {
+    slug: 'panificacao',
+    nome: 'Panificação',
+    descricao: 'Equipamentos para produção de pães e massas em padaria profissional.',
+    imagem: 'assets/illustrations/panificacao.svg'
+  },
+  {
+    slug: 'confeitaria',
+    nome: 'Confeitaria',
+    descricao: 'Soluções para massas, cremes e produção de doces em confeitaria profissional.',
+    imagem: 'assets/illustrations/confeitaria.svg'
+  },
+  {
+    slug: 'gastronomia',
+    nome: 'Gastronomia',
+    descricao: 'Outras linhas de cozinha profissional, sob consulta.',
+    imagem: 'assets/illustrations/gastronomia.svg'
+  },
+  {
+    slug: 'industriais',
+    nome: 'Equipamentos Industriais',
+    descricao: 'Máquinas para operações de maior porte e produção contínua.',
+    imagem: 'assets/illustrations/industriais.svg'
+  },
+  {
+    slug: 'preparacao',
+    nome: 'Preparação',
+    descricao: 'Equipamentos para processamento e pré-preparo de alimentos.',
+    imagem: 'assets/illustrations/preparacao.svg'
+  },
+  {
+    slug: 'coccao',
+    nome: 'Cocção',
+    descricao: 'Fornos e equipamentos de cocção para rotina profissional.',
+    imagem: 'assets/illustrations/coccao.svg'
+  },
+  {
+    slug: 'outros',
+    nome: 'Outros',
+    descricao: 'Outras linhas e equipamentos sob consulta com nossa equipe.',
+    imagem: 'assets/illustrations/outros.svg'
+  }
+];
